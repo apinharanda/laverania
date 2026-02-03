@@ -1,0 +1,55 @@
+
+Longest protein selection for Laverania transcriptomes
+
+Overview
+
+Select a single representative (longest) protein isoform per gene from Laverania species.
+The resulting protein sets used as input for OrthoFinder to infer orthologous groups across species.
+
+Protein sequences were filtered using genome-derived annotations, retaining one protein per gene.
+
+⸻
+
+Purpose
+	•	Remove isoform redundancy prior to orthology inference
+	•	Ensure one protein per gene per species
+	•	Apply a deterministic rule: 1) retain the longest protein per gene, 2) if multiple isoforms have identical length, retain the isoform appearing earliest in the FASTA file
+
+⸻
+
+Data resources
+
+All input data were obtained from NCBI RefSeq / GenBank protein annotations.
+
+For each species, the following files were used:
+	•	Protein FASTA (*_protein.faa)
+	•	Protein GenPept flat file (*_protein.gpff)
+
+⸻
+
+Species and accessions used
+
+Species	Assembly accession	Protein FASTA	GPFF
+Plasmodium adleri	GCF_900097015.1 (PADLG01)	GCF_900097015.1_PADLG01_protein.faa	GCF_900097015.1_PADLG01_protein.gpff
+Plasmodium billcollinsi	GCA_900257145.2	GCA_900257145.2_Plasmodium_billcollinsi_protein.faa	GCA_900257145.2_Plasmodium_billcollinsi_protein.gpff
+Plasmodium blacklocki	GCA_900097035.1 (PBLACG01)	GCA_900097035.1_PBLACG01_protein.faa	GCA_900097035.1_PBLACG01_protein.gpff
+Plasmodium falciparum	GCF_000002765.6	GCF_000002765.6_GCA_000002765_protein.faa	GCF_000002765.6_GCA_000002765_protein.gpff
+Plasmodium gaboni	GCF_001602025.1 (ASM160202v1)	GCF_001602025.1_ASM160202v1_protein.faa	GCF_001602025.1_ASM160202v1_protein.gpff
+Plasmodium praefalciparum	GCA_900095595.1 (PPRFG01)	GCA_900095595.1_PPRFG01_protein.faa	GCA_900095595.1_PPRFG01_protein.gpff
+Plasmodium reichenowi	GCF_001601855.1 (ASM160185v1)	GCF_001601855.1_ASM160185v1_protein.faa	GCF_001601855.1_ASM160185v1_protein.gpff
+
+
+⸻
+
+Output
+
+For each successfully processed species, the pipeline produced:
+	•	*_longest.fa
+FASTA file containing one protein per gene.
+	•	*_longest.fa.ids.txt
+List of retained protein accessions.
+
+Example:
+
+Padleri_longest.fa
+Padleri_longest.fa.ids.txt
