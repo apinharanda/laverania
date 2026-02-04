@@ -1,0 +1,431 @@
+
+RAxML-NG v. 1.2.2 released on 11.04.2024 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) Gold 6426Y, 32 cores, 1006 GB RAM (allocated: 16 physical cores)
+
+RAxML-NG was called at 21-Oct-2025 21:59:05 as follows:
+
+raxml-ng --all --msa SpeciesTreeAlignment.fa --msa-format FASTA --model LG+G --bs-trees 100 --seed 1 --threads 16 --prefix run_prot_lg_bs100
+
+Analysis options:
+  run mode: ML tree search + bootstrapping (Felsenstein Bootstrap)
+  start tree(s): random (10) + parsimony (10)
+  bootstrap replicates: parsimony (100)
+  random seed: 1
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (16 threads), thread pinning: OFF
+
+[00:00:00] Reading alignment from file: SpeciesTreeAlignment.fa
+[00:00:00] Loaded alignment with 7 taxa and 3161702 sites
+
+Alignment comprises 1 partitions and 124232 patterns
+
+Partition 0: noname
+Model: LG+G4m
+Alignment sites / patterns: 3161702 / 124232
+Gaps: 2.52 %
+Invariant sites: 76.47 %
+
+
+NOTE: Binary MSA file created: run_prot_lg_bs100.raxml.rba
+
+Parallelization scheme autoconfig: 1 worker(s) x 16 thread(s)
+
+[00:00:00] Generating 10 random starting tree(s) with 7 taxa
+[00:00:00] Generating 10 parsimony starting tree(s) with 7 taxa
+Parallel parsimony with 16 threads
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:01] Data distribution: max. partitions/sites/weight per thread: 1 / 7765 / 621200
+[00:00:01] Data distribution: max. searches per worker: 120
+
+Starting ML tree search with 20 distinct starting trees
+
+
+RAxML-NG v. 1.2.2 released on 11.04.2024 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) Platinum 8268 CPU @ 2.90GHz, 48 cores, 188 GB RAM (allocated: 0 physical cores)
+
+RAxML-NG was called at 21-Oct-2025 22:02:21 as follows:
+
+raxml-ng --all --msa SpeciesTreeAlignment.fa --msa-format FASTA --model LG+G --bs-trees 100 --seed 1 --threads 16 --prefix run_prot_lg_bs100
+
+Analysis options:
+  run mode: ML tree search + bootstrapping (Felsenstein Bootstrap)
+  start tree(s): random (10) + parsimony (10)
+  bootstrap replicates: parsimony (100)
+  random seed: 1
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (16 threads), thread pinning: OFF
+
+WARNING: The model you specified on the command line (LG+G) will be ignored 
+         since the binary MSA file already contains a model definition.
+         If you want to change the model, please re-run RAxML-NG 
+         with the original PHYLIP/FASTA alignment and --redo option.
+
+[00:00:00] Loading binary alignment from file: run_prot_lg_bs100.raxml.rba
+[00:00:00] Alignment comprises 7 taxa, 1 partitions and 124232 patterns
+
+Partition 0: noname
+Model: LG+G4m
+Alignment sites / patterns: 3161702 / 124232
+Gaps: 2.52 %
+Invariant sites: 76.47 %
+
+
+Parallelization scheme autoconfig: 1 worker(s) x 16 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] NOTE: Resuming execution from checkpoint (logLH: -15792603.88, ML trees: 0, bootstraps: 0)
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 7765 / 621200
+[00:00:00] Data distribution: max. searches per worker: 120
+
+ERROR: CPU core oversubscription detected! RAxML-NG will terminate now to avoid wasting resources.
+NOTE:  Details: https://github.com/amkozlov/raxml-ng/wiki/Parallelization#core-oversubscription
+NOTE:  You can use '--force perf_threads' to disable this check, but ONLY if you are 200% sure this is a false alarm!
+
+
+RAxML-NG v. 1.2.2 released on 11.04.2024 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) Platinum 8268 CPU @ 2.90GHz, 48 cores, 188 GB RAM (allocated: 0 physical cores)
+
+RAxML-NG was called at 21-Oct-2025 22:03:51 as follows:
+
+raxml-ng --all --msa SpeciesTreeAlignment.fa --msa-format FASTA --model LG+G --bs-trees 100 --seed 1 --prefix run_prot_lg_bs100
+
+Analysis options:
+  run mode: ML tree search + bootstrapping (Felsenstein Bootstrap)
+  start tree(s): random (10) + parsimony (10)
+  bootstrap replicates: parsimony (100)
+  random seed: 1
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), NONE/sequential
+
+WARNING: The model you specified on the command line (LG+G) will be ignored 
+         since the binary MSA file already contains a model definition.
+         If you want to change the model, please re-run RAxML-NG 
+         with the original PHYLIP/FASTA alignment and --redo option.
+
+[00:00:00] Loading binary alignment from file: run_prot_lg_bs100.raxml.rba
+[00:00:00] Alignment comprises 7 taxa, 1 partitions and 124232 patterns
+
+Partition 0: noname
+Model: LG+G4m
+Alignment sites / patterns: 3161702 / 124232
+Gaps: 2.52 %
+Invariant sites: 76.47 %
+
+
+Parallelization scheme autoconfig: 1 worker(s) x 1 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] NOTE: Resuming execution from checkpoint (logLH: -15792603.88, ML trees: 0, bootstraps: 0)
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 124232 / 9938560
+[00:00:00] Data distribution: max. searches per worker: 120
+
+Starting ML tree search with 20 distinct starting trees
+
+
+RAxML-NG v. 1.2.2 released on 11.04.2024 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) Platinum 8268 CPU @ 2.90GHz, 48 cores, 377 GB RAM (allocated: 0 physical cores)
+
+RAxML-NG was called at 21-Oct-2025 22:07:23 as follows:
+
+raxml-ng --all --msa SpeciesTreeAlignment.fa --msa-format FASTA --model LG+G --bs-trees 100 --seed 1 --prefix run_prot_lg_bs100
+
+Analysis options:
+  run mode: ML tree search + bootstrapping (Felsenstein Bootstrap)
+  start tree(s): random (10) + parsimony (10)
+  bootstrap replicates: parsimony (100)
+  random seed: 1
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), NONE/sequential
+
+WARNING: The model you specified on the command line (LG+G) will be ignored 
+         since the binary MSA file already contains a model definition.
+         If you want to change the model, please re-run RAxML-NG 
+         with the original PHYLIP/FASTA alignment and --redo option.
+
+[00:00:00] Loading binary alignment from file: run_prot_lg_bs100.raxml.rba
+[00:00:00] Alignment comprises 7 taxa, 1 partitions and 124232 patterns
+
+Partition 0: noname
+Model: LG+G4m
+Alignment sites / patterns: 3161702 / 124232
+Gaps: 2.52 %
+Invariant sites: 76.47 %
+
+
+Parallelization scheme autoconfig: 1 worker(s) x 1 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] NOTE: Resuming execution from checkpoint (logLH: -15792603.88, ML trees: 0, bootstraps: 0)
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 124232 / 9938560
+[00:00:00] Data distribution: max. searches per worker: 120
+
+Starting ML tree search with 20 distinct starting trees
+
+[00:01:15] ML tree search #1, logLikelihood: -15792603.882488
+[00:03:51] ML tree search #2, logLikelihood: -15792603.880542
+[00:06:16] ML tree search #3, logLikelihood: -15792603.880386
+[00:08:50] ML tree search #4, logLikelihood: -15792603.886413
+[00:12:23] ML tree search #5, logLikelihood: -15792603.882667
+[00:15:01] ML tree search #6, logLikelihood: -15792603.878685
+[00:17:51] ML tree search #7, logLikelihood: -15792603.882896
+[00:20:27] ML tree search #8, logLikelihood: -15792603.880345
+[00:23:04] ML tree search #9, logLikelihood: -15792603.882869
+[00:25:38] ML tree search #10, logLikelihood: -15792603.878710
+[00:27:57] ML tree search #11, logLikelihood: -15792603.881869
+
+RAxML-NG v. 1.2.2 released on 11.04.2024 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) Platinum 8268 CPU @ 2.90GHz, 48 cores, 188 GB RAM (allocated: 0 physical cores)
+
+RAxML-NG was called at 21-Oct-2025 22:38:02 as follows:
+
+raxml-ng --all --msa SpeciesTreeAlignment.fa --msa-format FASTA --model LG+G --bs-trees 100 --seed 1 --prefix run_prot_lg_bs100
+
+Analysis options:
+  run mode: ML tree search + bootstrapping (Felsenstein Bootstrap)
+  start tree(s): random (10) + parsimony (10)
+  bootstrap replicates: parsimony (100)
+  random seed: 1
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), NONE/sequential
+
+WARNING: The model you specified on the command line (LG+G) will be ignored 
+         since the binary MSA file already contains a model definition.
+         If you want to change the model, please re-run RAxML-NG 
+         with the original PHYLIP/FASTA alignment and --redo option.
+
+[00:00:00] Loading binary alignment from file: run_prot_lg_bs100.raxml.rba
+[00:00:00] Alignment comprises 7 taxa, 1 partitions and 124232 patterns
+
+Partition 0: noname
+Model: LG+G4m
+Alignment sites / patterns: 3161702 / 124232
+Gaps: 2.52 %
+Invariant sites: 76.47 %
+
+
+Parallelization scheme autoconfig: 1 worker(s) x 1 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] NOTE: Resuming execution from checkpoint (logLH: -15792603.88, ML trees: 11, bootstraps: 0)
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 124232 / 9938560
+[00:00:00] Data distribution: max. searches per worker: 109
+
+Starting ML tree search with 20 distinct starting trees
+
+[00:02:19] ML tree search #12, logLikelihood: -15792603.882128
+[00:05:02] ML tree search #13, logLikelihood: -15792603.881874
+[00:07:37] ML tree search #14, logLikelihood: -15792603.881771
+[00:10:12] ML tree search #15, logLikelihood: -15792603.882266
+[00:12:49] ML tree search #16, logLikelihood: -15792603.881694
+[00:15:25] ML tree search #17, logLikelihood: -15792603.880566
+[00:18:06] ML tree search #18, logLikelihood: -15792603.881735
+[00:20:45] ML tree search #19, logLikelihood: -15792603.880364
+[00:23:30] ML tree search #20, logLikelihood: -15792603.881816
+
+[00:23:30] ML tree search completed, best tree logLH: -15792603.878685
+
+[00:23:30] Starting bootstrapping analysis with 100 replicates.
+
+[00:25:28] Bootstrap tree #1, logLikelihood: -15793224.191136
+[00:27:22] Bootstrap tree #2, logLikelihood: -15789437.614441
+[00:29:14] Bootstrap tree #3, logLikelihood: -15793666.372065
+[00:31:10] Bootstrap tree #4, logLikelihood: -15797221.771907
+[00:33:02] Bootstrap tree #5, logLikelihood: -15798954.773134
+[00:34:57] Bootstrap tree #6, logLikelihood: -15781234.150821
+[00:36:54] Bootstrap tree #7, logLikelihood: -15795555.040280
+[00:38:48] Bootstrap tree #8, logLikelihood: -15791582.258211
+[00:40:38] Bootstrap tree #9, logLikelihood: -15785968.095942
+[00:42:32] Bootstrap tree #10, logLikelihood: -15795429.061605
+[00:44:29] Bootstrap tree #11, logLikelihood: -15790173.816280
+[00:46:20] Bootstrap tree #12, logLikelihood: -15797035.446741
+[00:48:15] Bootstrap tree #13, logLikelihood: -15797569.711039
+[00:50:12] Bootstrap tree #14, logLikelihood: -15783982.968373
+[00:52:04] Bootstrap tree #15, logLikelihood: -15797576.892134
+[00:53:57] Bootstrap tree #16, logLikelihood: -15802655.378249
+[00:55:49] Bootstrap tree #17, logLikelihood: -15779406.830208
+[00:57:41] Bootstrap tree #18, logLikelihood: -15789651.152746
+[00:59:38] Bootstrap tree #19, logLikelihood: -15785159.154659
+[01:01:32] Bootstrap tree #20, logLikelihood: -15790845.546879
+[01:03:30] Bootstrap tree #21, logLikelihood: -15782888.848346
+[01:05:22] Bootstrap tree #22, logLikelihood: -15783169.756949
+[01:07:16] Bootstrap tree #23, logLikelihood: -15784529.703348
+[01:09:08] Bootstrap tree #24, logLikelihood: -15790116.043809
+[01:11:04] Bootstrap tree #25, logLikelihood: -15795437.054457
+[01:12:58] Bootstrap tree #26, logLikelihood: -15796884.432002
+[01:14:50] Bootstrap tree #27, logLikelihood: -15785089.870358
+[01:16:48] Bootstrap tree #28, logLikelihood: -15777513.695295
+[01:18:45] Bootstrap tree #29, logLikelihood: -15789443.725505
+[01:20:41] Bootstrap tree #30, logLikelihood: -15785372.665004
+[01:22:35] Bootstrap tree #31, logLikelihood: -15797798.527917
+[01:24:35] Bootstrap tree #32, logLikelihood: -15794310.009589
+[01:26:28] Bootstrap tree #33, logLikelihood: -15789889.370735
+[01:28:25] Bootstrap tree #34, logLikelihood: -15790208.869867
+[01:30:16] Bootstrap tree #35, logLikelihood: -15789893.001740
+[01:32:11] Bootstrap tree #36, logLikelihood: -15788319.172449
+[01:34:05] Bootstrap tree #37, logLikelihood: -15786949.128777
+[01:36:05] Bootstrap tree #38, logLikelihood: -15796088.849908
+[01:37:57] Bootstrap tree #39, logLikelihood: -15784739.429454
+[01:39:49] Bootstrap tree #40, logLikelihood: -15798077.753729
+[01:41:47] Bootstrap tree #41, logLikelihood: -15794508.548247
+[01:43:39] Bootstrap tree #42, logLikelihood: -15788767.964766
+[01:45:36] Bootstrap tree #43, logLikelihood: -15787995.723103
+[01:47:32] Bootstrap tree #44, logLikelihood: -15799923.332908
+[01:49:27] Bootstrap tree #45, logLikelihood: -15800220.031258
+[01:51:21] Bootstrap tree #46, logLikelihood: -15803550.158734
+[01:53:15] Bootstrap tree #47, logLikelihood: -15789883.893806
+[01:55:08] Bootstrap tree #48, logLikelihood: -15787282.567811
+[01:57:03] Bootstrap tree #49, logLikelihood: -15793643.101922
+[01:59:00] Bootstrap tree #50, logLikelihood: -15791029.001044
+[02:00:53] Bootstrap tree #51, logLikelihood: -15784465.707848
+[02:02:46] Bootstrap tree #52, logLikelihood: -15791009.336193
+[02:04:36] Bootstrap tree #53, logLikelihood: -15794123.810382
+[02:06:33] Bootstrap tree #54, logLikelihood: -15786135.114721
+[02:08:32] Bootstrap tree #55, logLikelihood: -15787689.537559
+[02:10:25] Bootstrap tree #56, logLikelihood: -15793154.323349
+[02:12:18] Bootstrap tree #57, logLikelihood: -15793559.912092
+[02:14:13] Bootstrap tree #58, logLikelihood: -15788576.279195
+[02:16:06] Bootstrap tree #59, logLikelihood: -15783546.570014
+[02:18:01] Bootstrap tree #60, logLikelihood: -15802938.476076
+[02:19:57] Bootstrap tree #61, logLikelihood: -15790605.470346
+[02:21:51] Bootstrap tree #62, logLikelihood: -15796342.571136
+[02:23:44] Bootstrap tree #63, logLikelihood: -15797811.786949
+[02:25:40] Bootstrap tree #64, logLikelihood: -15790705.814806
+[02:27:32] Bootstrap tree #65, logLikelihood: -15789760.176072
+[02:29:26] Bootstrap tree #66, logLikelihood: -15793291.357079
+[02:31:20] Bootstrap tree #67, logLikelihood: -15789052.926090
+[02:33:16] Bootstrap tree #68, logLikelihood: -15792445.875786
+[02:35:12] Bootstrap tree #69, logLikelihood: -15789153.634490
+[02:37:05] Bootstrap tree #70, logLikelihood: -15798348.612923
+[02:39:01] Bootstrap tree #71, logLikelihood: -15794077.816399
+[02:40:58] Bootstrap tree #72, logLikelihood: -15811078.556521
+[02:42:57] Bootstrap tree #73, logLikelihood: -15796202.797485
+[02:44:52] Bootstrap tree #74, logLikelihood: -15797398.014923
+[02:46:48] Bootstrap tree #75, logLikelihood: -15789936.754902
+[02:48:43] Bootstrap tree #76, logLikelihood: -15798247.639320
+[02:50:41] Bootstrap tree #77, logLikelihood: -15802211.630889
+[02:52:36] Bootstrap tree #78, logLikelihood: -15794345.175706
+[02:54:29] Bootstrap tree #79, logLikelihood: -15794045.189828
+[02:56:28] Bootstrap tree #80, logLikelihood: -15788986.206356
+[02:58:23] Bootstrap tree #81, logLikelihood: -15794978.286612
+[03:00:20] Bootstrap tree #82, logLikelihood: -15786061.386231
+[03:02:12] Bootstrap tree #83, logLikelihood: -15783465.775660
+[03:04:09] Bootstrap tree #84, logLikelihood: -15784025.747832
+[03:06:08] Bootstrap tree #85, logLikelihood: -15786460.318726
+[03:08:01] Bootstrap tree #86, logLikelihood: -15802919.264715
+[03:09:58] Bootstrap tree #87, logLikelihood: -15780723.087193
+[03:11:51] Bootstrap tree #88, logLikelihood: -15801580.460581
+[03:13:44] Bootstrap tree #89, logLikelihood: -15785899.852172
+[03:15:41] Bootstrap tree #90, logLikelihood: -15793896.050238
+[03:17:34] Bootstrap tree #91, logLikelihood: -15787616.671438
+[03:19:30] Bootstrap tree #92, logLikelihood: -15790130.749187
+[03:21:28] Bootstrap tree #93, logLikelihood: -15791998.399032
+[03:23:22] Bootstrap tree #94, logLikelihood: -15787365.201165
+[03:25:17] Bootstrap tree #95, logLikelihood: -15798975.631915
+[03:27:15] Bootstrap tree #96, logLikelihood: -15795652.064183
+[03:29:14] Bootstrap tree #97, logLikelihood: -15799068.139455
+[03:31:11] Bootstrap tree #98, logLikelihood: -15794246.410302
+[03:33:05] Bootstrap tree #99, logLikelihood: -15787430.395534
+[03:34:58] Bootstrap tree #100, logLikelihood: -15795443.535315
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: GAMMA (4 cats, mean),  alpha: 0.345102 (ML),  weights&rates: (0.250000,0.009655) (0.250000,0.139742) (0.250000,0.664326) (0.250000,3.186276) 
+   Base frequencies (model): 0.079066 0.055941 0.041977 0.053052 0.012937 0.040767 0.071586 0.057337 0.022355 0.062157 0.099081 0.064600 0.022951 0.042302 0.044040 0.061197 0.053287 0.012066 0.034155 0.069147 
+   Substitution rates (model): 0.425093 0.276818 0.395144 2.489084 0.969894 1.038545 2.066040 0.358858 0.149830 0.395337 0.536518 1.124035 0.253701 1.177651 4.727182 2.139501 0.180717 0.218959 2.547870 0.751878 0.123954 0.534551 2.807908 0.363970 0.390192 2.426601 0.126991 0.301848 6.326067 0.484133 0.052722 0.332533 0.858151 0.578987 0.593607 0.314440 0.170887 5.076149 0.528768 1.695752 0.541712 1.437645 4.509238 0.191503 0.068427 2.145078 0.371004 0.089525 0.161787 4.008358 2.000679 0.045376 0.612025 0.083688 0.062556 0.523386 5.243870 0.844926 0.927114 0.010690 0.015076 0.282959 0.025548 0.017416 0.394456 1.240275 0.425860 0.029890 0.135107 0.037967 0.084808 0.003499 0.569265 0.640543 0.320627 0.594007 0.013266 0.893680 1.105251 0.075382 2.784478 1.143480 0.670128 1.165532 1.959291 4.128591 0.267959 4.813505 0.072854 0.582457 3.234294 1.672569 0.035855 0.624294 1.223828 1.080136 0.236199 0.257336 0.210332 0.348847 0.423881 0.044265 0.069673 1.807177 0.173735 0.018811 0.419409 0.611973 0.604545 0.077852 0.120037 0.245034 0.311484 0.008705 0.044261 0.296636 0.139538 0.089586 0.196961 1.739990 0.129836 0.268491 0.054679 0.076701 0.108882 0.366317 0.697264 0.442472 0.682139 0.508851 0.990012 0.584262 0.597054 5.306834 0.119013 4.145067 0.159069 4.273607 1.112727 0.078281 0.064105 1.033739 0.111660 0.232523 10.649107 0.137500 6.312358 2.592692 0.249060 0.182287 0.302936 0.619632 0.299648 1.702745 0.656604 0.023918 0.390322 0.748683 1.136863 0.049906 0.131932 0.185202 1.798853 0.099849 0.346960 2.020366 0.696175 0.481306 1.898718 0.094464 0.361819 0.165001 2.457121 7.803902 0.654683 1.338132 0.571468 0.095131 0.089613 0.296501 6.472279 0.248862 0.400547 0.098369 0.140825 0.245841 2.188158 3.151815 0.189510 0.249313 
+
+
+Final LogLikelihood: -15792603.878685
+
+AIC score: 31585231.757370 / AICc score: 31585231.757469 / BIC score: 31585387.356822
+Free parameters (model + branch lengths): 12
+
+Best ML tree saved to: /n/holylabs/neafsey_lab/Lab/apinharanda/laverania/proteins_to_run_orthofinder/prefix/OrthoFinder/Results_Oct16_6/MultipleSequenceAlignments/run_prot_lg_bs100.raxml.bestTree
+All ML trees saved to: /n/holylabs/neafsey_lab/Lab/apinharanda/laverania/proteins_to_run_orthofinder/prefix/OrthoFinder/Results_Oct16_6/MultipleSequenceAlignments/run_prot_lg_bs100.raxml.mlTrees
+Best ML tree with Felsenstein bootstrap (FBP) support values saved to: /n/holylabs/neafsey_lab/Lab/apinharanda/laverania/proteins_to_run_orthofinder/prefix/OrthoFinder/Results_Oct16_6/MultipleSequenceAlignments/run_prot_lg_bs100.raxml.support
+Optimized model saved to: /n/holylabs/neafsey_lab/Lab/apinharanda/laverania/proteins_to_run_orthofinder/prefix/OrthoFinder/Results_Oct16_6/MultipleSequenceAlignments/run_prot_lg_bs100.raxml.bestModel
+Bootstrap trees saved to: /n/holylabs/neafsey_lab/Lab/apinharanda/laverania/proteins_to_run_orthofinder/prefix/OrthoFinder/Results_Oct16_6/MultipleSequenceAlignments/run_prot_lg_bs100.raxml.bootstraps
+
+Execution log saved to: /n/holylabs/neafsey_lab/Lab/apinharanda/laverania/proteins_to_run_orthofinder/prefix/OrthoFinder/Results_Oct16_6/MultipleSequenceAlignments/run_prot_lg_bs100.raxml.log
+
+Analysis started: 21-Oct-2025 22:38:02 / finished: 22-Oct-2025 02:13:00
+
+Elapsed time: 12898.153 seconds (this run) / 14797.503 seconds (total with restarts)
+
+Consumed energy: 670.346 Wh (= 3 km in an electric car, or 17 km with an e-scooter!)
+
