@@ -35,16 +35,12 @@
 #   logs/pal2nal_<OG>.status.tsv
 #
 # SLURM
-# -----
-# Run as an array job where each task processes one orthogroup alignment.
-#
-# How to run (test)
+# test
 # -----------------
-# sbatch --array=1-20 03a_pal2nal_backtranslate_array.sh
-#
-# How to run (full; update array max to your file count)
+# sbatch --array=1-20 pal2nal_backtranslate_beforeTrim.sh
+#full
 # ------------------------------------------------------
-# sbatch --array=1-5079 03a_pal2nal_backtranslate_array.sh
+# sbatch --array=1-5079 pal2nal_backtranslate_beforeTrim.sh
 #
 # Requirements
 # ------------
@@ -65,7 +61,7 @@ PROT_DIR="MultipleSequenceAlignments"
 OUT_DIR="Codons_raw"
 LOG_DIR="logs"
 
-# Path to your combined CDS FASTA (edit if needed)
+# Path to combined CDS FASTA
 CDS_ALL="/n/holylabs/neafsey_lab/Lab/apinharanda/laverania/proteins_to_run_orthofinder/prefix/OrthoFinder/Results_Sep23_1/all_species.cds.std.fa"
 
 mkdir -p "$OUT_DIR" "$LOG_DIR"
