@@ -11,7 +11,7 @@
 # -------
 # Trim codon alignments produced by PAL2NAL (Codons_raw/*.codon.fa) using trimAl,
 # trimming in CODON units (i.e., whole codons). This avoids breaking reading
-# frames and is the recommended order: PAL2NAL first, then trim codons.
+# frames
 #
 # Inputs
 # ------
@@ -32,7 +32,7 @@
 # -----------------
 # sbatch --array=1-20 03b_trimal_trim_codon_alignments_array.sh
 #
-# How to run (full; update array max to your file count)
+# How to run (full)
 # ------------------------------------------------------
 # sbatch --array=1-5079 trimal_trim_codon_alignments_array.sh
 #
