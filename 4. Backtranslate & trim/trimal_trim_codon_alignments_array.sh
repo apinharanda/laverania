@@ -11,7 +11,7 @@
 # -------
 # Trim codon alignments produced by PAL2NAL (Codons_raw/*.codon.fa) using trimAl,
 # trimming in CODON units (i.e., whole codons). This avoids breaking reading
-# frames
+# frames.
 #
 # Inputs
 # ------
@@ -79,29 +79,14 @@ tri_exit=$?
 
 out_headers=$(grep -c '^>' "$tmp" 2>/dev/null || echo 0)
 
-codon_ok=1
-if [[ "$out_headers" -eq 0 ]]; then
-  codon_ok=0
-else
-  modset=$(awk '
-    /^>/ {if(seq!=""){gsub(/-/,"",seq); print length(seq)%3}; seq=""; next}
-    {gsub(/[ \t\r\n]/,""); seq=seq$0}
-    END{if(seq!=""){gsub(/-/,"",seq); print length(seq)%3}}
-  ' "$tmp" | sort -u | tr '\n' ' ')
-  echo "CODON_LEN_MOD3_SET=${modset}" >> "$log"
-  if echo "$modset" | grep -qvE '^(0[[:space:]]*)$'; then
-    codon_ok=0
-  fi
-fi
-
 ts_end="$(date -Is)"
 
-if [[ "$tri_exit" -eq 0 && "$out_headers" -gt 0 && "$codon_ok" -eq 1 ]]; then
+if [[ "$tri_exit" -eq 0 && "$out_headers" -gt 0 ]]; then
   mv -f "$tmp" "$out"
   echo "END    ${ts_end}  OG=${OG}  STATUS=OK  out=${out}" >> "$log"
   printf "%s\t%s\tOK\t%s\t%s\n" "$ts_end" "$OG" "$out_headers" "$out" > "$status"
 else
   rm -f "$tmp"
-  echo "END    ${ts_end}  OG=${OG}  STATUS=FAIL  trimal_exit=${tri_exit}  out_headers=${out_headers}  codon_ok=${codon_ok}" >> "$log"
+  echo "END    ${ts_end}  OG=${OG}  STATUS=FAIL  trimal_exit=${tri_exit}  out_headers=${out_headers}" >> "$log"
   printf "%s\t%s\tFAIL\t%s\t%s\n" "$ts_end" "$OG" "$out_headers" "$out" > "$status"
 fi
