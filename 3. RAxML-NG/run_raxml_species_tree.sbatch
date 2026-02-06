@@ -40,7 +40,7 @@ THREADS=16
 
 # Run RAxML-NG
 raxml-ng --all \
-  --msa species_concat.fa \
+  --msa SpeciesTreeAlignment.fa \
   --model LG+G \
   --bs-trees 200 \
   --bs-metric fbp \
