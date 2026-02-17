@@ -107,7 +107,7 @@ p <- ggplot(gene_tbl, aes(x = piN_gene)) +
   theme_classic()
 
 pdf(paste0("piN_per_gene_distribution_", Sys.Date(), ".pdf"),
-    width = 6, height = 4)
+    width = 8, height = 4)
 print(p)
 dev.off()
 
