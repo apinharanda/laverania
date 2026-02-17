@@ -1,0 +1,13 @@
+App runs locally with:
+"/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R"
+setwd("app_shiny")
+library(shiny)
+runApp(".")
+
+Make it live:
+Set shinyapps.io account info inside R 4.4
+Ran:
+setwd("/Users/anp5087/Library/CloudStorage/Dropbox/neafsey/app_shiny")
+deployApp(".")
+
+
