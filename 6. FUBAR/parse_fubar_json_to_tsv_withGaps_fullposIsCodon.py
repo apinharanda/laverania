@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 ###############################################################################
 # SCRIPT: parse_fubar_json_to_tsv_withGaps_fullposIsCodon.py
-#
+# Author: Ana Pinharanda (with ChatGPT helper) 
 # WHAT THIS DOES
 #   Convert HyPhy FUBAR JSON output into a TSV table (one row per codon/site).
 #
