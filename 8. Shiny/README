@@ -7,6 +7,7 @@ runApp(".")
 Make it live:
 Set shinyapps.io account info inside R 4.4
 Ran:
+library(rsconnect)
 setwd("/Users/anp5087/Library/CloudStorage/Dropbox/neafsey/app_shiny")
 deployApp(".")
 
