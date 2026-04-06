@@ -6,9 +6,14 @@ runApp(".")
 
 Make it live:
 Set shinyapps.io account info inside R 4.4
-Ran:
+
+Ran because I need to increase the max:
+length(list.files("/Users/anp5087/Library/CloudStorage/Dropbox/neafsey/app_shiny_v2", recursive = TRUE, all.files = TRUE))
+[1] 166113
+
+So then 
 library(rsconnect)
-setwd("/Users/anp5087/Library/CloudStorage/Dropbox/neafsey/app_shiny")
-deployApp(".")
+options(rsconnect.max.bundle.files = 200000)
+rsconnect::deployApp("/Users/anp5087/Library/CloudStorage/Dropbox/neafsey/app_shiny_v2")
 
 
