@@ -1,5 +1,4 @@
-Protein Evolution Explorer for Plasmodium (PEEP)
-This repository contains the comparative- and population-genomic analyses underlying Protein Evolution Explorer for Plasmodium (PEEP) and the associated manuscript.
+#Protein Evolution Explorer for Plasmodium (PEEP)
 
 This repository contains the code and analysis workflow used to:
 
