@@ -1,4 +1,4 @@
-#Protein Evolution Explorer for Plasmodium (PEEP)
+Protein Evolution Explorer for Plasmodium (PEEP)
 
 This repository contains the code and analysis workflow used to:
 
